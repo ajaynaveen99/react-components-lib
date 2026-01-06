@@ -7,22 +7,23 @@ export default function ProgressBars() {
   
 
   useEffect(() => {
-    // allow DOM to paint first
+   
     setTimeout(() => {
       setProgress(targets);
     }, 300);
   }, []);
 
   return (
-    <div style={{ padding: "20px", width: "400px" }}>
+    <div  style={{ padding: "20px", width: "400px", textAlign: "center", margin: " 150px auto" }}>
       <h3>Multiple Progress Bars</h3>
 
-      {progress.map((value, index) => (
+      {progress.map((value) => (
             <div
             style={{
-              height: "18px",
+              height: "20px",
+              border:" 3px solid #d3cdcdff",
               borderRadius: "10px",
-              background: "#eee",
+              background: "#ddddddff",
               overflow: "hidden",
               marginBottom: "10px",
               marginTop: "10px",
@@ -32,7 +33,9 @@ export default function ProgressBars() {
               style={{
                 height: "100%",
                 width: `${value}%`,
-                background: "#6ba873ff",
+                fontWeight: "bold",
+                color: "solid",
+                background: "#02ff24ff",
                 transition: "width 1.9s ease",
                 textAlign: "right",
 
